@@ -36,7 +36,7 @@ Start by cloning the repository to your local machine:
 
 bash
 
-git clone https://github.com/yourusername/Sentiment_Analysis.git
+git clone https://github.com/Alvin-Siju/Sentiment_Analysis.git
 cd Sentiment_Analysis
 2. Set Up the Virtual Environment
 It's recommended to set up a virtual environment to manage dependencies:
