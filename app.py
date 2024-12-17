@@ -42,6 +42,15 @@ def load_naive_bayes_model():
     with open("vectorizer.pkl", "rb") as vec_file:
         vectorizer = pickle.load(vec_file)
     return model, vectorizer
+# Function to make sentiment predictions using Naive Bayes
+def predict_sentiment_naive_bayes(text):
+    model, vectorizer = load_naive_bayes_model()
+    # Preprocess and vectorize the input text
+    text = preprocess_text(text)
+    vectorized_text = vectorizer.transform([text])
+    sentiment = model.predict(vectorized_text)
+    return sentiment[0]
+
 # Streamlit app
 st.title("Sentiment Analysis with BERT and Naive Bayes")
 
