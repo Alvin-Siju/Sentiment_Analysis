@@ -1,30 +1,48 @@
 Sentiment Analysis
+
 This project is designed to perform sentiment analysis on text data using a Naive Bayes classifier. The model is trained on the ACL-IMDB dataset, which contains movie reviews labeled as either positive or negative. The trained model can then predict the sentiment of new text data, classifying it as either positive or negative.
 
 Project Structure
+
 Files in the Repository:
-acllmdb_v1.tar.gz: A compressed file containing the ACL-IMDB dataset. The dataset consists of movie reviews labeled with their corresponding sentiment (positive/negative).
-app.ipynb: A Jupyter notebook used for data exploration, preprocessing, model training, and evaluation. It contains step-by-step processes to build and evaluate the sentiment analysis model.
-app.py: The main Python application script that loads the trained Naive Bayes model and vectorizer, and allows users to input new text for sentiment prediction. This script can be used to run the sentiment analysis on any text data.
-naive_bayes_model.pkl: A serialized (pickled) file containing the trained Naive Bayes model. This model is used to classify new text data as either positive or negative sentiment.
-Procfile: A file used for deployment purposes (if you choose to deploy the app to a platform like Heroku). It specifies the commands to run the application on the server.
-requirements.txt: A list of Python dependencies required to run the project. It includes libraries such as scikit-learn, pandas, numpy, and others necessary for model training and running the application.
-vectorizer.pkl: A serialized file containing the trained TF-IDF vectorizer. This vectorizer is used to convert text data into numerical form that the machine learning model can process.
+
+acllmdb_v1.tar.gz: 
+                 A compressed file containing the ACL-IMDB dataset. The dataset consists of movie reviews labeled with their corresponding sentiment (positive/negative).
+
+app.ipynb: 
+                 A Jupyter notebook used for data exploration, preprocessing, model training, and evaluation. It contains step-by-step processes to build and evaluate the sentiment analysis model.
+
+app.py: 
+                The main Python application script that loads the trained Naive Bayes model and vectorizer, and allows users to input new text for sentiment prediction. This script can be used to run the sentiment analysis on any text data.
+
+naive_bayes_model.pkl:  
+                A serialized (pickled) file containing the trained Naive Bayes model. This model is used to classify new text data as either positive or negative sentiment.
+
+Procfile: 
+                A file used for deployment purposes (if you choose to deploy the app to a platform like Heroku). It specifies the commands to run the application on the server.
+
+requirements.txt: 
+                A list of Python dependencies required to run the project. It includes libraries such as scikit-learn, pandas, numpy, and others necessary for model training and running the application.
+
+vectorizer.pkl: 
+                A serialized file containing the trained TF-IDF vectorizer. This vectorizer is used to convert text data into numerical form that the machine learning model can process.
+
 Installation
+
 To run this project locally, follow these steps:
 
 1. Clone the Repository
 Start by cloning the repository to your local machine:
 
 bash
-Copy code
+
 git clone https://github.com/yourusername/Sentiment_Analysis.git
 cd Sentiment_Analysis
 2. Set Up the Virtual Environment
 It's recommended to set up a virtual environment to manage dependencies:
 
 bash
-Copy code
+
 # Create a virtual environment (replace "env" with your preferred name)
 python -m venv env
 
@@ -37,7 +55,7 @@ source env/bin/activate
 Next, install the required Python packages from the requirements.txt file:
 
 bash
-Copy code
+
 pip install -r requirements.txt
 This will install all the necessary libraries to run the project, including scikit-learn, pandas, numpy, and others.
 
@@ -55,7 +73,7 @@ To use the trained model for sentiment prediction, you can run the app.py script
 Example usage:
 
 python
-Copy code
+
 import pickle
 
 # Load the trained model and vectorizer
@@ -82,7 +100,7 @@ If you want to explore the dataset itself, you can extract the acllmdb_v1.tar.gz
 To extract the dataset:
 
 bash
-Copy code
+
 tar -xvzf acllmdb_v1.tar.gz
 4. Running the Application
 The app.py script can be modified to create a simple command-line or graphical interface to allow users to input text for sentiment prediction.
