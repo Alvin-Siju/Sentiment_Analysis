@@ -43,7 +43,7 @@ def load_naive_bayes_model():
         vectorizer = pickle.load(vec_file)
     return model, vectorizer
 # Function to make sentiment predictions using Naive Bayes
-def predict_sentiment_naive_bayes(text):
+def predict_sentiment_nb(text):
     model, vectorizer = load_naive_bayes_model()
     # Preprocess and vectorize the input text
     text = preprocess_text(text)
